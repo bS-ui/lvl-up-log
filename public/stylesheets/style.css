@@ -12,21 +12,20 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #4d598b;
   color: #f6f6f6;
-  /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  font-family: quicksand;
   margin: 0;
 }
 
 nav {
-  background-color: #f6f6f6;
-  color: #1a1a1a;
+  background-color: #7381a8;
+  color: #082147;
   display: flex;
   align-items: center;
   padding: 10px;
   min-height: 60px;
+  font-size: 40px;
 }
 
 main {
@@ -36,6 +35,34 @@ main {
   flex-direction: column;
 }
 
-.right {
-  margin-left: auto;
+#main-nav-bar{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+#logo-appname-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#nav-app-name{
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+#profile-name-avatar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+#user-profile-avatar{
+  margin-left: 20px;
+  border-radius: 100px;
+  vertical-align: middle;
 }

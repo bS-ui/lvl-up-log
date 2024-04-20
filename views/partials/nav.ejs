@@ -3,27 +3,41 @@
   <% } %>
 </head>
 <body>
-  <nav>
-    <% if (user) { %>
-      <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <div 
-        id="g_id_onload"
-        data-client_id="<%= googleClientID %>"
-        data-login_uri="/auth/google"
-        data-auto_prompt="false"
-        data-prompt_parent_id="g_id_onload"
-      ></div>
-      <div 
-        class="g_id_signin right"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="rectangular"
-        data-logo_alignment="left"
-      ></div>
-    <% } %>
+  <nav id="main-nav-bar">
+    <div id="logo-appname-container">
+      <img id="nav-logo"src="assets/images/lvlUpLogo.png"alt="lvlUpLogo"height="60"width="60">
+      <div id="nav-app-name">
+        lvlUpLog
+      </div>
+    </div>
+    <div id="profile-name-avatar">
+      <% if (user) { %>
+        <div>
+          <%= user.profile.name %>
+        </div>
+        <div>
+          <img id="user-profile-avatar"src="<%= user.profile.avatar %>"alt="<%= user.profile.name %>s avatar"height="60"width="60">
+        </div>
+        <a href="/auth/logout" class="right">
+          <!-- display the users name here as well as their avatar so they can click and navigate to their profile! -->
+        </a>
+      <% } else { %>
+        <div 
+          id="g_id_onload"
+          data-client_id="<%= googleClientID %>"
+          data-login_uri="/auth/google"
+          data-auto_prompt="false"
+          data-prompt_parent_id="g_id_onload"
+        ></div>
+        <div 
+          class="g_id_signin right"
+          data-type="standard"
+          data-size="large"
+          data-theme="outline"
+          data-text="sign_in_with"
+          data-shape="rectangular"
+          data-logo_alignment="left"
+        ></div>
+      <% } %>
+    </div>
   </nav>
