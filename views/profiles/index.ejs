@@ -1,0 +1,39 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/profiles/index.css" />
+<%- include('../partials/nav') %>
+
+<div id="profile-card-container">
+<% profiles.forEach(profile => { %>
+    <div id="profile-card">
+      <div id="profile-card-avatar-name">
+        <img src="<%= profile.avatar %>" alt="" id="profile-card-avatar">
+        <%= profile.name %>
+      </div>
+      <div id="profile-card-favorite-game">
+        <div id="profile-card-favorite-game-text">
+          Favorite Game:
+        </div>
+        <div id="profile-card-favorite-game-details">
+          funky game
+          <img src="<%= profile.avatar %>" alt="" id="profile-card-favorite-game-image" height="40" width="40">
+        </div>
+      </div>
+      <div id="profile-card-recently-played">
+        <div id="profile-card-recently-played-text">
+          Recently Played:
+        </div>
+        <!-- for each recently played game up to 2 per user -->
+        <div id="profile-card-recently-played-details">
+          funky game
+          <img src="<%= profile.avatar %>" alt="" id="profile-card-favorite-game-image" height="40" width="40">
+        </div>
+        <div id="profile-card-recently-played-details">
+          funky game
+          <img src="<%= profile.avatar %>" alt="" id="profile-card-favorite-game-image" height="40" width="40">
+        </div>
+      </div>
+    </div>
+<% }) %>
+</div>
+
+<%- include('../partials/footer') %>
