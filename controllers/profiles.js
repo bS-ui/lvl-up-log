@@ -53,7 +53,9 @@ function setFav(req, res) {
       }
     })
   })
-  .catch(error => console.error('Error:', error));
+  .catch(error => {
+    console.error('Error:', error)
+  })
 }
 
 export {
