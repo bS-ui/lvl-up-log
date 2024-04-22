@@ -1,0 +1,17 @@
+#profile-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+
+  color: #ff3560;
+
+  font-size: 35px;
+}
+
+#profile-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

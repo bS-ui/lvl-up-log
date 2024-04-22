@@ -5,19 +5,23 @@
 <body>
   <nav id="main-nav-bar">
     <div id="logo-appname-container">
-      <img id="nav-logo"src="assets/images/lvlUpLogo.png"alt="lvlUpLogo"height="60"width="60">
-      <div id="nav-app-name">
-        lvlUpLog
-      </div>
+      <a href="/">
+        <img id="nav-logo"src="/assets/images/lvlUpLogo.png"alt="lvlUpLogo"height="100"width="100">
+      </a>
+      <a href="/">
+        <div id="nav-app-name">
+          lvlUpLog
+        </div>
+      </a>
     </div>
     <div id="profile-name-avatar">
       <% if (user) { %>
-        <div>
+        <a id= "profile-name"href="/profiles/<%= user.profile._id %>">
           <%= user.profile.name %>
-        </div>
-        <div>
+        </a>
+        <a href="/profiles/<%= user.profile._id %>">
           <img id="user-profile-avatar"src="<%= user.profile.avatar %>"alt="<%= user.profile.name %>s avatar"height="60"width="60">
-        </div>
+        </a>
         <a href="/auth/logout" class="right">
           <!-- display the users name here as well as their avatar so they can click and navigate to their profile! -->
         </a>

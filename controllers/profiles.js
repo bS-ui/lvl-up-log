@@ -10,6 +10,17 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    res.render('profiles/show', {
+      profile,
+      title: `lvlUpLog: ${profile.name}`
+    })
+  })
+}
+
 export {
   index,
+  show,
 }

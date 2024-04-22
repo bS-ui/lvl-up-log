@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
+  flex-flow: row wrap;
 }
 
 #profile-card {
@@ -16,14 +16,17 @@
 
   border-radius: 5px;
 
-  background-color: #7381a8;
+  background-color: #333341;
 
-  color: #082147;
+  color: #ff3560;
+
+  box-shadow: #ff3560 2px 2px;
 }
 
 #profile-card-avatar {
   border-radius: 100px;
   margin-right: 10px;
+  border: 2px solid #ff3560;
 }
 
 #profile-card-avatar-name {
@@ -60,4 +63,8 @@
   align-items: center;
 
   margin-top: 10px;
+}
+
+#nav-app-name {
+  color: #ff3560;
 }

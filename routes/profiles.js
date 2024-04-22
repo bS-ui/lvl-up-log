@@ -7,6 +7,9 @@ const router = Router()
 // GET /profiles
 router.get('/', profilesCtrl.index)
 
+// GET /profiles/:profileId
+router.get('/:profileId', profilesCtrl.show)
+
 export {
   router
 }
