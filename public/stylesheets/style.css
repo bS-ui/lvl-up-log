@@ -13,7 +13,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #ff3560;
+  color: #37ebea;
 }
 body {
   background-color: #222230;
@@ -24,13 +24,13 @@ body {
 
 nav {
   background-color: #333341;
-  color: #ff3560;
+  color: #37ebea;
   display: flex;
   align-items: center;
   padding: 10px;
   min-height: 60px;
   font-size: 40px;
-  box-shadow: #ff3560 2px 2px;
+  box-shadow: #37ebea 2px 2px;
 }
 
 main {
@@ -68,11 +68,11 @@ main {
 
 #user-profile-avatar{
   margin-left: 20px;
-  border: 2px solid #ff3560;
+  border: 2px solid #37ebea;
   border-radius: 100px;
   vertical-align: middle;
 }
 
 #profile-name {
-  color: #ff3560;
+  color: #37ebea;
 }

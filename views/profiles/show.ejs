@@ -7,14 +7,30 @@
 </div>
 <div id="profile-content">
   <div id="profile-personal-info">
-
+    <img id="profile-avatar"src="<%= profile.avatar %>" alt="">
+    <div id="profile-name">
+      <i class="fa-solid fa-person"></i>
+      <%= profile.name %> 
+    </div>
+    <div id="profile-location">
+      <i class="fa-solid fa-map-pin"></i>
+      <%= profile.location %> Testville, TV TVA
+    </div>
+    <div id="profile-steam">
+      <i class="fa-brands fa-steam"></i>
+      <%= profile.steam %> Testington
+    </div>
+    <div id="profile-discord">
+      <i class="fa-brands fa-discord"></i>
+      <%= profile.discord %> Testington
+    </div>
   </div>
   <div id="profile-game-info">
     <div id="profile-favorite-game-text">
       <div>
         Favorite Game:
       </div> 
-      <img src="" alt="">
+      <i class="fa-solid fa-circle-plus"></i>
     </div>
     <div id="profile-favorite-game-details">
 
@@ -23,7 +39,7 @@
       <div>
         Recently Played Games:
       </div>
-      <img src="" alt="">
+      <i class="fa-solid fa-circle-plus"></i>
     </div>
     <div id="profile-recent-game-details">
       

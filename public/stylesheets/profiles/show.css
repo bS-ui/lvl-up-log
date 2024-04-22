@@ -5,13 +5,46 @@
 
   margin-top: 30px;
 
-  color: #ff3560;
+  color: #37ebea;
 
   font-size: 35px;
 }
 
+#profile-avatar {
+  margin-bottom: 20px;
+  border: 2px solid #37ebea;
+  border-radius: 100px;
+}
 #profile-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-top: 35px;
+  margin-left: 25vh;
+  margin-right: 25vh;
+
+  background-color: #333341;
+}
+#profile-personal-info {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#profile-favorite-game-text, #profile-recent-game-text {
+  color: #37ebea;
+}
+
+i {
+  color: #37ebea;
+}
+
+#profile-name, #profile-steam, #profile-discord, #profile-location {
+  margin-bottom: 15px;
+  color: #37ebea;
 }

@@ -18,15 +18,15 @@
 
   background-color: #333341;
 
-  color: #ff3560;
+  color: #37ebea;
 
-  box-shadow: #ff3560 2px 2px;
+  box-shadow: #37ebea 2px 2px;
 }
 
 #profile-card-avatar {
   border-radius: 100px;
   margin-right: 10px;
-  border: 2px solid #ff3560;
+  border: 2px solid #37ebea;
 }
 
 #profile-card-avatar-name {
@@ -66,5 +66,5 @@
 }
 
 #nav-app-name {
-  color: #ff3560;
+  color: #37ebea;
 }
