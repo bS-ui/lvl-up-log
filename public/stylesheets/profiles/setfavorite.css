@@ -1,0 +1,43 @@
+#favorite-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-and-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  background-color: #333341;
+  color: #37ebea;
+  font-family: quicksand;
+  font-size: 20px;
+  border: none;
+  margin: 20px 0px 20px;
+}
+
+#favorite-game-title {
+  margin: 20px;
+  font-size: 30px;
+}
+
+button {
+  background-color: #333341;
+  color: #37ebea;
+  font-family: quicksand;
+  font-size: 20px;
+  border: none;
+  margin: 20px 0px 20px;
+}
+
+textarea {
+  background-color: #333341;
+  color: #37ebea;
+  font-family: quicksand;
+  font-size: 20px;
+  border: none;
+  margin: 20px 0px 20px;
+}

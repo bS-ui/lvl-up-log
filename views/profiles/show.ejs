@@ -13,7 +13,7 @@
       <%= profile.name %> 
     </div>
     <div id="profile-location">
-      <i class="fa-solid fa-map-pin"></i>
+        <i class="fa-solid fa-map-pin"></i>
       <%= profile.location %> Testville, TV TVA
     </div>
     <div id="profile-steam">
@@ -29,8 +29,12 @@
     <div id="profile-favorite-game-text">
       <div>
         Favorite Game:
-      </div> 
-      <i class="fa-solid fa-circle-plus"></i>
+      </div>
+      <% if (profile._id.equals(user?.profile._id)) { %>
+        <a href="/profiles/<%= profile._id %>/set-fav">
+          <i class="fa-solid fa-circle-plus"></i>
+        </a> 
+      <% } %>
     </div>
     <div id="profile-favorite-game-details">
 
@@ -39,7 +43,9 @@
       <div>
         Recently Played Games:
       </div>
-      <i class="fa-solid fa-circle-plus"></i>
+      <a href="/profiles/<%= profile._id %>/set-rpg">
+        <i class="fa-solid fa-circle-plus"></i>
+      </a>
     </div>
     <div id="profile-recent-game-details">
       

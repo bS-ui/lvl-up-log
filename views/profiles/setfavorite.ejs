@@ -1,0 +1,29 @@
+<%- include('../partials/html-head') %>
+
+<link rel="stylesheet" href="/stylesheets/profiles/setfavorite.css" />
+<%- include('../partials/nav') %>
+
+  <div id="favorite-game-container">
+    <div id="favorite-game-title">
+      Add your favorite game!
+    </div>
+    <form action="/profiles/<%= profile._id %>/set-fav" method="POST">
+      <select name="genre" class="form-control" id="genre">  
+        <% genres.results.forEach(genre => { %>
+          <option <%= genre.name == selectedGenre ? selected="selected" : ""%> value="<%= genre.name %>"><%= genre.name %></option>
+        <% }) %>
+      </select>
+      <button type="submit">Set Genre</button>
+    </form>
+      <form id="game-and-review"action="/profiles/<%= profile._id %>/set-fav" method="POST">
+        <select name="selectedGame" class="form-control" id="game">  
+          <% games.results.forEach(game => { %>
+            <option value="<%= game.name %>"><%= game.name %></option>
+          <% }) %>
+        </select>
+        <textarea name="review" id="" cols="30" rows="10">Review goes here!</textarea>
+        <button type="submit">Set Favorite Game</button>
+      </form>
+  </div>
+
+<%- include('../partials/footer') %>
