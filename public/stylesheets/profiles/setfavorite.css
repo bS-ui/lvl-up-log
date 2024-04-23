@@ -50,3 +50,14 @@ input {
   border: none;
   margin: 20px 0px 20px;
 }
+
+i {
+  color: rgb(255, 243, 132);
+  margin: 0px 10px;
+}
+
+#rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

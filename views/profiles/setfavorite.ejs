@@ -21,7 +21,10 @@
           <option value="<%= game.name %>"><%= game.name %></option>
         <% }) %>
       </select>
-      <input name="rating" type="number" value="5" min="1" max="5">
+      <div id="rating">
+        <i class="fa-solid fa-star"></i>
+        <input name="rating" type="number" value="5" min="1" max="5">
+      </div>
       <textarea name="text" id="review" cols="30" rows="10">Review goes here!</textarea>
       <button type="submit">Set Favorite Game</button>
     </form>
