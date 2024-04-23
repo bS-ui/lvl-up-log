@@ -15,6 +15,9 @@ router.get('/:profileId/set-fav', profilesCtrl.setFav)
 
 // POST /profiles/:profileID/set-fav
 router.post('/:profileId/set-fav', profilesCtrl.setFav)
+
+// POST /profiles/:profileID/new-fav
+router.post('/:profileId/new-fav', profilesCtrl.newFav)
 export {
   router
 }

@@ -15,13 +15,12 @@
       </select>
       <button type="submit">Set Genre</button>
     </form>
-      <form id="game-and-review"action="/profiles/<%= profile._id %>/set-fav" method="POST">
-        <select name="selectedGame" class="form-control" id="game">  
+      <form id="game-and-review"action="/profiles/<%= profile._id %>/new-fav" method="POST">
+        <select name="name" class="form-control" id="game">  
           <% games.results.forEach(game => { %>
             <option value="<%= game.name %>"><%= game.name %></option>
           <% }) %>
         </select>
-        <textarea name="review" id="" cols="30" rows="10">Review goes here!</textarea>
         <button type="submit">Set Favorite Game</button>
       </form>
   </div>

@@ -10,7 +10,7 @@ The main page of the site is a display of all the users that have signed into th
 
 ### Try it!:
 
-Click [lvlUpLog](deployment url) here to try it out!
+Click [lvlUpLog](https://lvl-up-log.fly.dev/) here to try it out!
 
 ### Motivation/Insipration:
 

@@ -58,8 +58,17 @@ function setFav(req, res) {
   })
 }
 
+function newFav(req, res) {
+  console.log(req.body)
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    profile.favoriteGame = req.body
+    res.redirect(`/profiles/${profile._id}`)
+  })
+}
 export {
   index,
   show,
   setFav,
+  newFav,
 }
