@@ -66,7 +66,14 @@ function newFav(req, res) {
     profile.favoriteGame.review = req.body
     profile.save()
     .then
-      res.redirect(`/profiles/${profile._id}`)
+      fetch(`https://api.rawg.io/api/games/${(profile.favoriteGame.name).replace(/\s+/g, '-').toLowerCase()}?key=b658202e9c5c4018973e0e3ce9a98977`)
+      .then(response => response.json())
+      .then(game => {
+        profile.favoriteGame.imageUrl = game.background_image
+        profile.save()
+        .then
+          res.redirect(`/profiles/${profile._id}`)
+      })
   })
 }
 export {
