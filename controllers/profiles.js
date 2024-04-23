@@ -63,7 +63,10 @@ function newFav(req, res) {
   Profile.findById(req.params.profileId)
   .then(profile => {
     profile.favoriteGame = req.body
-    res.redirect(`/profiles/${profile._id}`)
+    profile.favoriteGame.review = req.body
+    profile.save()
+    .then
+      res.redirect(`/profiles/${profile._id}`)
   })
 }
 export {
