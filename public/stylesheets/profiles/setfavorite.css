@@ -41,3 +41,12 @@ textarea {
   border: none;
   margin: 20px 0px 20px;
 }
+
+input {
+  background-color: #333341;
+  color: #37ebea;
+  font-family: quicksand;
+  font-size: 20px;
+  border: none;
+  margin: 20px 0px 20px;
+}
