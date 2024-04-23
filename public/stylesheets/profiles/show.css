@@ -32,19 +32,41 @@
   align-items: center;
   flex-direction: column;
 
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-#profile-favorite-game-text, #profile-recent-game-text {
+#profile-favorite-game-add, #profile-recent-game-add {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
   color: #37ebea;
+  margin: 0px 0px 10px;
 }
 
 i {
   color: #37ebea;
+  margin: 0px 10px;
 }
 
 #profile-name, #profile-steam, #profile-discord, #profile-location {
   margin-bottom: 15px;
   color: #37ebea;
+}
+
+#favorite-game-image {
+  border: 2px solid #37ebea;
+  border-radius: 100px;
+  margin: 0px 20px 0px 0px;
+}
+
+#profile-favorite-game-details {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+#favorite-game-text {
+  display: flex;
+  flex-direction: column;
 }

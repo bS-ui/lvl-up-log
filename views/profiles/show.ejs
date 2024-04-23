@@ -26,7 +26,7 @@
     </div>
   </div>
   <div id="profile-game-info">
-    <div id="profile-favorite-game-text">
+    <div id="profile-favorite-game-add">
       <div>
         Favorite Game:
       </div>
@@ -37,12 +37,16 @@
       <% } %>
     </div>
     <div id="profile-favorite-game-details">
-      <%= profile.favoriteGame.name %>
-      <%= profile.favoriteGame.rating %>
-      <%= profile.favoriteGame.review.text %>
-      <img src="<%= profile.favoriteGame.imageUrl %>" alt="erm">
+      <img id="favorite-game-image" src="<%= profile.favoriteGame.imageUrl %>" alt="erm" height="100" width="150">
+      <div id="favorite-game-text">
+        <div id="fav-name-and-rating">
+          <%= profile.favoriteGame.name %>
+          <i class="fa-solid fa-star"> <%= profile.favoriteGame.rating %></i>
+        </div>
+        <%= profile.favoriteGame.review.text %>
+      </div>
     </div>
-    <div id="profile-recent-game-text">
+    <div id="profile-recent-game-add">
       <div>
         Recently Played Games:
       </div>
