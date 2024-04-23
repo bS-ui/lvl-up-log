@@ -20,8 +20,8 @@
             Nothing here yet!
           <% } else { %>
             <%= profile.favoriteGame.name %>
+            <img src="<%= profile.favoriteGame.imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
           <% } %>
-          <img src="<%= profile.avatar %>" alt="" id="profile-card-favorite-game-image" height="40" width="40">
         </div>
       </div>
       <div id="profile-card-recently-played">
