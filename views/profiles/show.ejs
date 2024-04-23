@@ -36,27 +36,43 @@
         </a> 
       <% } %>
     </div>
-    <div id="profile-favorite-game-details">
-      <img id="favorite-game-image" src="<%= profile.favoriteGame.imageUrl %>" alt="erm" height="100" width="150">
-      <div id="favorite-game-text">
-        <div id="fav-name-and-rating">
-          <%= profile.favoriteGame.name %>
-          <i class="fa-solid fa-star"> <%= profile.favoriteGame.rating %></i>
+    <% if (profile.favoriteGame == undefined) { %>
+      There seems to be nothing here yet!
+    <% } else { %>
+      <div id="profile-favorite-game-details">
+        <img id="favorite-game-image" src="<%= profile.favoriteGame.imageUrl %>" alt="erm" height="100" width="150">
+        <div id="favorite-game-text">
+          <div id="fav-name-and-rating">
+            <%= profile.favoriteGame.name %>
+            <i class="fa-solid fa-star"> <%= profile.favoriteGame.rating %></i>
+          </div>
+          <%= profile.favoriteGame.review.text %>
         </div>
-        <%= profile.favoriteGame.review.text %>
       </div>
-    </div>
+    <% } %>
     <div id="profile-recent-game-add">
       <div>
         Recently Played Games:
       </div>
-      <a href="/profiles/<%= profile._id %>/set-rpg">
-        <i class="fa-solid fa-circle-plus"></i>
-      </a>
+      <% if (profile._id.equals(user?.profile._id)) { %>
+        <a href="/profiles/<%= profile._id %>/set-rpg">
+          <i class="fa-solid fa-circle-plus"></i>
+        </a> 
+      <% } %>
     </div>
+    <% profile.recentlyPlayedGames.forEach(game => { %>
     <div id="profile-recent-game-details">
-      
+      <img id="favorite-game-image" src="<%= game.imageUrl %>" alt="erm" height="100" width="150">
     </div>
+    <div id="favorite-game-text">
+      <div id="fav-name-and-rating">
+        <%= game.name %>
+        <i class="fa-solid fa-star"> <%= game.rating %></i>
+      </div>
+      <%= game.review.text %>
+    </div>
+    <% }) %>
+    
   </div>
 </div>
 

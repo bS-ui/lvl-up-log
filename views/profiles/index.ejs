@@ -16,7 +16,11 @@
           Favorite Game:
         </div>
         <div id="profile-card-favorite-game-details">
-          <%= profile.favoriteGame.name %>
+          <% if (profile.favoriteGame == undefined) { %>
+            Nothing here yet!
+          <% } else { %>
+            <%= profile.favoriteGame.name %>
+          <% } %>
           <img src="<%= profile.avatar %>" alt="" id="profile-card-favorite-game-image" height="40" width="40">
         </div>
       </div>
