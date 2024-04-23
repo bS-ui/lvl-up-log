@@ -50,7 +50,7 @@
         </div>
       </div>
     <% } %>
-    <div id="profile-recent-game-add">
+    <div id="profile-favorite-game-add">
       <div>
         Recently Played Games:
       </div>
@@ -61,15 +61,15 @@
       <% } %>
     </div>
     <% profile.recentlyPlayedGames.forEach(game => { %>
-    <div id="profile-recent-game-details">
+    <div id="profile-favorite-game-details">
       <img id="favorite-game-image" src="<%= game.imageUrl %>" alt="erm" height="100" width="150">
-    </div>
-    <div id="favorite-game-text">
-      <div id="fav-name-and-rating">
-        <%= game.name %>
-        <i class="fa-solid fa-star"> <%= game.rating %></i>
+      <div id="favorite-game-text">
+        <div id="fav-name-and-rating">
+          <%= game.name %>
+          <i class="fa-solid fa-star"> <%= game.rating %></i>
+        </div>
+        <%= game.review.text %>
       </div>
-      <%= game.review.text %>
     </div>
     <% }) %>
     
