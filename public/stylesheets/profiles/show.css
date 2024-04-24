@@ -11,7 +11,9 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 35px 25vh 0px 25vh;
+  padding: 20px;
   background-color: #333341;
+  box-shadow: #37ebea 2px 2px;
 }
 #personal-info {
   display: flex;
