@@ -15,22 +15,22 @@ router.get('/:profileId', profilesCtrl.show)
 router.get('/:profileId/set-fav', isLoggedIn, profilesCtrl.setFav)
 
 // GET /profiles/:profileId/set-rpg
-router.get('/:profileId/set-rpg', profilesCtrl.setRpg)
+router.get('/:profileId/set-rpg', isLoggedIn, profilesCtrl.setRpg)
 
 // POST /profiles/:profileID/set-fav
-router.post('/:profileId/set-fav', profilesCtrl.setFav)
+router.post('/:profileId/set-fav', isLoggedIn, profilesCtrl.setFav)
 
 // POST /profiles/:profileID/set-rpg
-router.post('/:profileId/set-rpg', profilesCtrl.setRpg)
+router.post('/:profileId/set-rpg', isLoggedIn,profilesCtrl.setRpg)
 
 // POST /profiles/:profileID/new-fav
-router.post('/:profileId/new-fav', profilesCtrl.newFav)
+router.post('/:profileId/new-fav', isLoggedIn, profilesCtrl.newFav)
 
 // POST /profiles/:profileID/new-rpg
-router.post('/:profileId/new-rpg', profilesCtrl.newRpg)
+router.post('/:profileId/new-rpg', isLoggedIn, profilesCtrl.newRpg)
 
 // DELETE /profiles/:/profileId/:gameId
-router.delete('/:profileId/:gameId', profilesCtrl.deleteRpg)
+router.delete('/:profileId/:gameId', isLoggedIn, profilesCtrl.deleteRpg)
 
 export {
   router
