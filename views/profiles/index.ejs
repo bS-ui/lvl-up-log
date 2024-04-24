@@ -7,12 +7,12 @@
 <div id="profile-card-container">
 <% profiles.forEach(profile => { %>
     <a href="/profiles/<%= profile._id %>"id="profile-card">
-      <div id="profile-card-avatar-name">
-        <img src="<%= profile.avatar %>" alt="" id="profile-card-avatar">
+      <div id="avatar-name">
+        <img src="<%= profile.avatar %>" alt="" id="avatar">
         <%= profile.name %>
       </div>
-      <div id="profile-card-favorite-game">
-        <div id="profile-card-favorite-game-text">
+      <div id="favorite-game">
+        <div id="favorite-game-text">
           Favorite Game:
         </div>
         <div id="profile-card-favorite-game-details">
@@ -30,7 +30,14 @@
         </div>
         <!-- for each recently played game up to 2 per user -->
         <% if (profile.recentlyPlayedGames.length == 0) { %>
-          Nothing here yet!
+          <div id="profile-card-recently-played-details">
+            Nothing here yet!
+          </div>
+        <% } else if (profile.recentlyPlayedGames.length == 1) { %>
+          <div id="profile-card-recently-played-details">
+            <%= profile.recentlyPlayedGames[0].name %>
+            <img src="<%= profile.recentlyPlayedGames[0].imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
+          </div>
         <% } else { %>
           <div id="profile-card-recently-played-details">
             <%= profile.recentlyPlayedGames[0].name %>
@@ -40,7 +47,7 @@
             <%= profile.recentlyPlayedGames[1].name %>
             <img src="<%= profile.recentlyPlayedGames[1].imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
           </div>
-          <% } %>
+        <% } %>
       </div>
     </a>
 <% }) %>

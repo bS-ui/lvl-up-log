@@ -8,6 +8,10 @@ function index(req, res) {
       title: 'lvlUpLog: Profiles'
     })
   })
+  .catch(error => {
+    console.error('Error:', error)
+    res.redirect(`/profiles`)
+  })
 }
 
 function show(req, res) {
@@ -17,6 +21,10 @@ function show(req, res) {
       profile,
       title: `lvlUpLog: ${profile.name}`
     })
+  })
+  .catch(error => {
+    console.error('Error:', error)
+    res.redirect(`/profiles`)
   })
 }
 
@@ -30,27 +38,39 @@ function setFav(req, res) {
         fetch(`https://api.rawg.io/api/games?genres=action&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-        res.render('profiles/setfavorite', {
-          selectedGenre: req.body.genre,
-          games,
-          genres,
-          profile,
-          title: `lvlUpLog: ${profile.name}`
+          res.render('profiles/setfavorite', {
+            selectedGenre: req.body.genre,
+            games,
+            genres,
+            profile,
+            title: `lvlUpLog: ${profile.name}`
+          })
         })
-      })
+        .catch(error => {
+          console.error('Error:', error)
+          res.redirect(`/profiles`)
+        })
       } else {
         fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-        res.render('profiles/setfavorite', {
-          selectedGenre: req.body.genre,
-          games,
-          genres,
-          profile,
-          title: `lvlUpLog: ${profile.name}`
+          res.render('profiles/setfavorite', {
+            selectedGenre: req.body.genre,
+            games,
+            genres,
+            profile,
+            title: `lvlUpLog: ${profile.name}`
+          })
         })
-      })
+        .catch(error => {
+          console.error('Error:', error)
+          res.redirect(`/profiles`)
+        })
       }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      res.redirect(`/profiles`)
     })
   })
   .catch(error => {
@@ -73,6 +93,14 @@ function newFav(req, res) {
         .then
           res.redirect(`/profiles/${profile._id}`)
       })
+      .catch(error => {
+        console.error('Error:', error)
+        res.redirect(`/profiles`)
+      })
+  })
+  .catch(error => {
+    console.error('Error:', error)
+    res.redirect(`/profiles`)
   })
 }
 
@@ -86,27 +114,39 @@ function setRpg(req, res) {
         fetch(`https://api.rawg.io/api/games?genres=action&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-        res.render('profiles/setrecentlyplayedgame', {
-          selectedGenre: req.body.genre,
-          games,
-          genres,
-          profile,
-          title: `lvlUpLog: ${profile.name}`
+          res.render('profiles/setrecentlyplayedgame', {
+            selectedGenre: req.body.genre,
+            games,
+            genres,
+            profile,
+            title: `lvlUpLog: ${profile.name}`
+          })
         })
-      })
+        .catch(error => {
+          console.error('Error:', error)
+          res.redirect(`/profiles`)
+        })
       } else {
         fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-        res.render('profiles/setrecentlyplayedgame', {
-          selectedGenre: req.body.genre,
-          games,
-          genres,
-          profile,
-          title: `lvlUpLog: ${profile.name}`
+          res.render('profiles/setrecentlyplayedgame', {
+            selectedGenre: req.body.genre,
+            games,
+            genres,
+            profile,
+            title: `lvlUpLog: ${profile.name}`
+          })
         })
-      })
+        .catch(error => {
+          console.error('Error:', error)
+          res.redirect(`/profiles`)
+        })
       }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      res.redirect(`/profiles`)
     })
   })
   .catch(error => {
@@ -130,6 +170,14 @@ function newRpg(req, res) {
         .then
           res.redirect(`/profiles/${profile._id}`)
       })
+      .catch(error => {
+        console.error('Error:', error)
+        res.redirect(`/profiles`)
+      })
+  })
+  .catch(error => {
+    console.error('Error:', error)
+    res.redirect(`/profiles`)
   })
 }
 

@@ -40,7 +40,9 @@
   align-items: center;
   flex-direction: row;
   color: #37ebea;
-  margin: 0px 0px 10px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 i {

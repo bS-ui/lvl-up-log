@@ -4,7 +4,6 @@
   align-items: center;
   flex-flow: row wrap;
 }
-
 #profile-card {
   display: flex;
   justify-content: center;
@@ -14,32 +13,30 @@
   margin-top: 50px;
   padding: 10px;
 
-  border-radius: 5px;
-
   background-color: #333341;
+  box-shadow: #37ebea 2px 2x;
 
   color: #37ebea;
-
-  box-shadow: #37ebea 2px 2px;
 }
-
-#profile-card-avatar {
-  border-radius: 100px;
-  margin-right: 10px;
-  border: 2px solid #37ebea;
-}
-
-#profile-card-avatar-name {
+#avatar-name {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   font-size: larger;
 }
+#avatar {
+  border-radius: 100px;
+  border: 2px solid #37ebea;
 
-#profile-card-favorite-game {
+  margin-right: 10px;
+}
+#favorite-game {
   width: 100%;
   margin-top: 10px;
+}
+#profile-card-favorite-game-text {
+  font-weight: bold;
 }
 
 #profile-card-favorite-game-details {
@@ -48,6 +45,8 @@
   align-items: center;
 
   color: white;
+  
+  margin-top: 10px;
 }
 
 #profile-card-favorite-game-image {
@@ -74,9 +73,6 @@
   color: #37ebea;
 }
 
-#profile-card-favorite-game-text {
-  font-weight: bold;
-}
 
 #profile-card-recently-played-text {
   font-weight: bold;
