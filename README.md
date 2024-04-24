@@ -1,4 +1,4 @@
-![App Image](coming soon)
+![App Image](https://i.imgur.com/nSK9N3b.png)
 
 # **lvlUpLog!**
 

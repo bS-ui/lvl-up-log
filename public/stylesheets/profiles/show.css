@@ -48,7 +48,10 @@ i {
   margin: 0px 10px;
 }
 
-#profile-name, #profile-steam, #profile-discord, #profile-location {
+#profile-name2, #profile-steam, #profile-discord, #profile-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   margin-bottom: 15px;
   color: #37ebea;
 }
@@ -69,4 +72,13 @@ i {
 #favorite-game-text {
   display: flex;
   flex-direction: column;
+}
+
+#logout {
+  background-color: #222230;
+  color: #37ebea;
+  font-family: quicksand;
+  font-size: 20px;
+  border: none;
+  margin: 20px 0px 20px;
 }

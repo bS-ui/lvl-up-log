@@ -111,6 +111,7 @@ function setRpg(req, res) {
   })
   .catch(error => {
     console.error('Error:', error)
+    res.redirect(`/profiles`)
   })
 }
 

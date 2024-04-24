@@ -29,7 +29,7 @@
           Recently Played:
         </div>
         <!-- for each recently played game up to 2 per user -->
-        <% if (profile.recentlyPlayedGames == []) { %>
+        <% if (profile.recentlyPlayedGames.length == 0) { %>
           Nothing here yet!
         <% } else { %>
           <div id="profile-card-recently-played-details">
@@ -40,8 +40,8 @@
             <%= profile.recentlyPlayedGames[1].name %>
             <img src="<%= profile.recentlyPlayedGames[1].imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
           </div>
-        </div>
-        <% } %>
+          <% } %>
+      </div>
     </a>
 <% }) %>
 </div>

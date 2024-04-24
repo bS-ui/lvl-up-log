@@ -44,12 +44,15 @@
 
 #profile-card-favorite-game-details {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+
+  color: white;
 }
 
 #profile-card-favorite-game-image {
   border-radius: 15px;
+  margin: 0px 0px 0px 20px;
 }
 
 #profile-card-recently-played {
@@ -59,12 +62,22 @@
 
 #profile-card-recently-played-details {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 
   margin-top: 10px;
+
+  color: white;
 }
 
 #nav-app-name {
   color: #37ebea;
+}
+
+#profile-card-favorite-game-text {
+  font-weight: bold;
+}
+
+#profile-card-recently-played-text {
+  font-weight: bold;
 }
