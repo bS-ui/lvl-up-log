@@ -1,3 +1,8 @@
+#index-header {
+  text-align: center;
+  margin: 50px 0px 0px;
+  font-size: 35px
+}
 #profile-card-container {
   display: flex;
   justify-content: space-evenly;
@@ -9,7 +14,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 50px 0px 0px 0px;
+  margin: 50px 20px 20px 0px;
   padding: 20px;
   background-color: #333341;
   box-shadow: #37ebea 2px 2px;
@@ -40,9 +45,10 @@
   color: white;
   margin: 10px 0px 0px 0px;
 }
-#favorite-game-image {
+#favorite-game-image, #recently-played-game-image{
   border-radius: 15px;
   margin: 0px 0px 0px 20px;
+  border: 2px solid #37ebea;
 }
 #recently-played {
   width: 100%;
@@ -57,8 +63,4 @@
   align-items: center;
   margin: 10px 0px 0px 0px;
   color: white;
-}
-#recently-played-game-image {
-  border-radius: 15px;
-  margin: 0px 0px 0px 20px;
 }
