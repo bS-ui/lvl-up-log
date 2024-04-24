@@ -9,71 +9,56 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  margin-top: 50px;
+  margin: 50px 0px 0px 0px;
   padding: 10px;
-
   background-color: #333341;
   box-shadow: #37ebea 2px 2x;
-
   color: #37ebea;
 }
 #avatar-name {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   font-size: larger;
 }
 #avatar {
   border-radius: 100px;
   border: 2px solid #37ebea;
-
   margin-right: 10px;
 }
 #favorite-game {
   width: 100%;
-  margin-top: 10px;
+  margin: 10px 0px 0px 0px;
 }
-#profile-card-favorite-game-text {
+#favorite-game-text {
   font-weight: bold;
 }
-
-#profile-card-favorite-game-details {
+#favorite-game-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   color: white;
-  
-  margin-top: 10px;
+  margin: 10px 0px 0px 0px;
 }
-
-#profile-card-favorite-game-image {
+#favorite-game-image {
   border-radius: 15px;
   margin: 0px 0px 0px 20px;
 }
-
-#profile-card-recently-played {
+#recently-played {
   width: 100%;
-  margin-top: 10px;
+  margin: 10px 0px 0px 0px;
 }
-
-#profile-card-recently-played-details {
+#recently-played-text {
+  font-weight: bold;
+}
+#recently-played-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  margin-top: 10px;
-
+  margin: 10px 0px 0px 0px;
   color: white;
 }
-
-#nav-app-name {
-  color: #37ebea;
-}
-
-
-#profile-card-recently-played-text {
-  font-weight: bold;
+#recently-played-game-image {
+  border-radius: 15px;
+  margin: 0px 0px 0px 20px;
 }

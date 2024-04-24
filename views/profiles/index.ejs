@@ -15,37 +15,36 @@
         <div id="favorite-game-text">
           Favorite Game:
         </div>
-        <div id="profile-card-favorite-game-details">
+        <div id="favorite-game-details">
           <% if (profile.favoriteGame == undefined) { %>
             Nothing here yet!
           <% } else { %>
             <%= profile.favoriteGame.name %>
-            <img src="<%= profile.favoriteGame.imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
+            <img src="<%= profile.favoriteGame.imageUrl %>" alt="" id="favorite-game-image" height="40" width="60">
           <% } %>
         </div>
       </div>
-      <div id="profile-card-recently-played">
-        <div id="profile-card-recently-played-text">
+      <div id="recently-played">
+        <div id="recently-played-text">
           Recently Played:
         </div>
-        <!-- for each recently played game up to 2 per user -->
         <% if (profile.recentlyPlayedGames.length == 0) { %>
-          <div id="profile-card-recently-played-details">
+          <div id="recently-played-details">
             Nothing here yet!
           </div>
         <% } else if (profile.recentlyPlayedGames.length == 1) { %>
-          <div id="profile-card-recently-played-details">
+          <div id="recently-played-details">
             <%= profile.recentlyPlayedGames[0].name %>
-            <img src="<%= profile.recentlyPlayedGames[0].imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
+            <img src="<%= profile.recentlyPlayedGames[0].imageUrl %>" alt="" id="recently-played-game-image" height="40" width="60">
           </div>
         <% } else { %>
-          <div id="profile-card-recently-played-details">
+          <div id="recently-played-details">
             <%= profile.recentlyPlayedGames[0].name %>
-            <img src="<%= profile.recentlyPlayedGames[0].imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
+            <img src="<%= profile.recentlyPlayedGames[0].imageUrl %>" alt="" id="recently-played-game-image" height="40" width="60">
           </div>
-          <div id="profile-card-recently-played-details">
+          <div id="recently-played-details">
             <%= profile.recentlyPlayedGames[1].name %>
-            <img src="<%= profile.recentlyPlayedGames[1].imageUrl %>" alt="" id="profile-card-favorite-game-image" height="40" width="60">
+            <img src="<%= profile.recentlyPlayedGames[1].imageUrl %>" alt="" id="recently-played-game-image" height="40" width="60">
           </div>
         <% } %>
       </div>
