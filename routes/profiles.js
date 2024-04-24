@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import passport from 'passport'
 import * as profilesCtrl from '../controllers/profiles.js'
+import { isLoggedIn } from '../middleware/middleware.js'
 
 const router = Router()
 
@@ -11,7 +12,7 @@ router.get('/', profilesCtrl.index)
 router.get('/:profileId', profilesCtrl.show)
 
 // GET /profiles/:profileId/set-fav
-router.get('/:profileId/set-fav', profilesCtrl.setFav)
+router.get('/:profileId/set-fav', isLoggedIn, profilesCtrl.setFav)
 
 // GET /profiles/:profileId/set-rpg
 router.get('/:profileId/set-rpg', profilesCtrl.setRpg)
@@ -27,6 +28,9 @@ router.post('/:profileId/new-fav', profilesCtrl.newFav)
 
 // POST /profiles/:profileID/new-rpg
 router.post('/:profileId/new-rpg', profilesCtrl.newRpg)
+
+// DELETE /profiles/:/profileId/:gameId
+router.delete('/:profileId/:gameId', profilesCtrl.deleteRpg)
 
 export {
   router

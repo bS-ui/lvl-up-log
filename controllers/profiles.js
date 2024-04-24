@@ -181,6 +181,16 @@ function newRpg(req, res) {
   })
 }
 
+function deleteRpg(req, res) {
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    profile.recentlyPlayedGames.remove({_id: req.params.gameId})
+    profile.save()
+    .then
+      res.redirect(`/profiles/${profile._id}`)
+  })
+}
+
 export {
   index,
   show,
@@ -188,4 +198,5 @@ export {
   newFav,
   setRpg,
   newRpg,
+  deleteRpg,
 }

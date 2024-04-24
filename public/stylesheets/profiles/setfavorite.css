@@ -53,3 +53,6 @@ textarea {
   color: rgb(255, 243, 132);
   margin: 0px 10px;
 }
+#delete {
+  color: rgb(250, 68, 68)
+}
