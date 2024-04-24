@@ -1,32 +1,31 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/profiles/show.css" />
 <%- include('../partials/nav') %>
-
-<div id="profile-intro">
+<div id="intro">
   Welcome to <%= profile.name %>s Profile!
 </div>
 <div id="profile-content">
-  <div id="profile-personal-info">
-    <img id="profile-avatar"src="<%= profile.avatar %>" alt="">
-    <div id="profile-name2">
+  <div id="personal-info">
+    <img id="avatar"src="<%= profile.avatar %>" alt="">
+    <div id="name">
       <i class="fa-solid fa-person"></i>
       <%= profile.name %> 
     </div>
-    <div id="profile-location">
+    <div id="location">
         <i class="fa-solid fa-map-pin"></i>
       <%= profile.location %> Testville, TV TVA
     </div>
-    <div id="profile-steam">
+    <div id="steam">
       <i class="fa-brands fa-steam"></i>
       <%= profile.steam %> Testington
     </div>
-    <div id="profile-discord">
+    <div id="discord">
       <i class="fa-brands fa-discord"></i>
       <%= profile.discord %> Testington
     </div>
   </div>
-  <div id="profile-game-info">
-    <div id="profile-favorite-game-add">
+  <div id="game-info">
+    <div id="favorite-game">
       <div id="favorite-game-header">
         Favorite Game:
       </div>
@@ -41,8 +40,8 @@
         There seems to be nothing here yet!
       </div>
     <% } else { %>
-      <div id="profile-favorite-game-details">
-        <img id="favorite-game-image" src="<%= profile.favoriteGame.imageUrl %>" alt="erm" height="100" width="150">
+      <div id="favorite-game-details">
+        <img id="favorite-game-image" src="<%= profile.favoriteGame.imageUrl %>" alt="erm" height="100" width="165">
         <div id="favorite-game-text">
           <div id="fav-name-and-rating">
             <%= profile.favoriteGame.name %>
@@ -52,8 +51,8 @@
         </div>
       </div>
     <% } %>
-    <div id="profile-favorite-game-add">
-      <div id="recently-played-game-header">
+    <div id="recent-game">
+      <div id="recent-game-header">
         Recently Played Games:
       </div>
       <% if (profile._id.equals(user?.profile._id)) { %>
@@ -68,10 +67,10 @@
       </div>
     <% } else { %>
     <% profile.recentlyPlayedGames.forEach(game => { %>
-    <div id="profile-favorite-game-details">
-      <img id="favorite-game-image" src="<%= game.imageUrl %>" alt="erm" height="100" width="150">
-      <div id="favorite-game-text">
-        <div id="fav-name-and-rating">
+    <div id="recent-game-details">
+      <img id="recent-game-image" src="<%= game.imageUrl %>" alt="erm" height="100" width="165">
+      <div id="recent-game-text">
+        <div id="recent-name-and-rating">
           <%= game.name %>
           <i class="fa-solid fa-star"> <%= game.rating %></i>
         </div>
@@ -82,5 +81,4 @@
     <% } %>
   </div>
 </div>
-
 <%- include('../partials/footer') %>
