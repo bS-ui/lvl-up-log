@@ -18,15 +18,27 @@
     </div>
     <div id="location">
         <i class="fa-solid fa-map-pin"></i>
-      <%= profile.location %>
+        <% if (profile.location == undefined) { %>
+          Nothing here yet!
+        <% } else { %>
+          <%= profile.location %>
+        <% } %>
     </div>
     <div id="steam">
       <i class="fa-brands fa-steam"></i>
-      <%= profile.steam %>
+      <% if (profile.steam == undefined) { %>
+        Nothing here yet!
+      <% } else { %>
+        <%= profile.steam %>
+      <% } %>
     </div>
     <div id="discord">
       <i class="fa-brands fa-discord"></i>
-      <%= profile.discord %>
+      <% if (profile.discord == undefined) { %>
+        Nothing here yet!
+      <% } else { %>
+        <%= profile.discord %>
+      <% } %>
     </div>
   </div>
   <div id="game-info">
