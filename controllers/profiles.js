@@ -130,7 +130,7 @@ function setRpg(req, res) {
         fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-          res.render('profiles/setrecentlyplayedgame', {
+          res.render('profiles/set-recently-played-game', {
             selectedGenre: req.body.genre,
             games,
             genres,
@@ -191,6 +191,9 @@ function deleteRpg(req, res) {
   })
 }
 
+function editInfo(req, res) {
+  res.render('profiles/editInfo')
+}
 export {
   index,
   show,
@@ -199,4 +202,5 @@ export {
   setRpg,
   newRpg,
   deleteRpg,
+  editInfo,
 }

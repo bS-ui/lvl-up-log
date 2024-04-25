@@ -17,6 +17,9 @@ router.get('/:profileId/set-fav', isLoggedIn, profilesCtrl.setFav)
 // GET /profiles/:profileId/set-rpg
 router.get('/:profileId/set-rpg', isLoggedIn, profilesCtrl.setRpg)
 
+// GET /profiles/:profileId/editInfo
+router.get('/:profileId/editInfo', isLoggedIn, profilesCtrl.editInfo)
+
 // POST /profiles/:profileID/set-fav
 router.post('/:profileId/set-fav', isLoggedIn, profilesCtrl.setFav)
 

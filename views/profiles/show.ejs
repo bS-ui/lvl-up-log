@@ -6,7 +6,11 @@
 </div>
 <div id="profile-content">
   <div id="personal-info">
-    <i class="fa-solid fa-pen"></i>
+    <% if (profile._id.equals(user?.profile._id)) { %>
+    <a href="/profiles/<%= profile._id %>/set-fav">
+      <i class="fa-solid fa-pen"></i>
+    </a>
+    <% } %>
     <img id="avatar"src="<%= profile.avatar %>" alt="">
     <div id="name">
       <i class="fa-solid fa-person"></i>

@@ -1,13 +1,13 @@
 <%- include('../partials/html-head') %>
 
-<link rel="stylesheet" href="/stylesheets/profiles/setfavorite.css" />
+<link rel="stylesheet" href="/stylesheets/profiles/set-favorite.css" />
 <%- include('../partials/nav') %>
 
   <div id="game-container">
     <div id="add-game-header">
-      Add your favorite game!
+      Add your recently played game!
     </div>
-    <form action="/profiles/<%= profile._id %>/set-fav" method="POST">
+    <form action="/profiles/<%= profile._id %>/set-rpg" method="POST">
       <select name="genre" class="form-control" id="genre">  
         <% genres.results.forEach(genre => { %>
           <option <%= genre.name == selectedGenre ? selected="selected" : ""%> value="<%= genre.name %>"><%= genre.name %></option>
@@ -15,7 +15,7 @@
       </select>
       <button type="submit">Set Genre</button>
     </form>
-    <form id="game-and-review"action="/profiles/<%= profile._id %>/new-fav" method="POST">
+    <form id="game-and-review"action="/profiles/<%= profile._id %>/new-rpg" method="POST">
       <select name="name" class="form-control" id="game">  
         <% games.results.forEach(game => { %>
           <option value="<%= game.name %>"><%= game.name %></option>
@@ -26,7 +26,7 @@
         <input name="rating" type="number" value="5" min="1" max="5">
       </div>
       <textarea name="text" id="review" cols="30" rows="10">Review goes here!</textarea>
-      <button type="submit">Set Favorite Game</button>
+      <button type="submit">Add Recently Played Game</button>
     </form>
   </div>
 
