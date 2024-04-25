@@ -1,0 +1,48 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/profiles/edit.css" />
+<%- include('../partials/nav') %>
+
+<div id="header">
+  Edit your profile!
+</div>
+<div id="main">
+  <div id="sub">
+    <div id="edit-text">
+      <div id="location">
+        Location:
+      </div>
+      <div id="steam">
+        Steam:
+      </div>
+      <div id="discord">
+        Discord:
+      </div>
+    </div>
+    <form id="edit-data" action="/profiles/<%= profile._id %>/edit-info" method="POST">
+      <div id="location">
+        <% if (profile.location == undefined) { %>
+          <input type="text" name="location" value="Add your location here!">
+        <% } else { %>
+          <input type="text" name="location" value="<%= profile.location %>">
+        <% } %>
+      </div>
+      <div id="steam">
+        <% if (profile.steam == undefined) { %>
+          <input type="text" name="steam" value="Add your steam here!">
+        <% } else { %>
+          <input type="text" name="steam" value="<%= profile.steam %>">
+        <% } %>
+      </div>
+      <div id="discord">
+        <% if (profile.discord == undefined) { %>
+          <input type="text" name="discord" value="Add your discord here!">
+        <% } else { %>
+          <input type="text" name="discord" value="<%= profile.dicsord %>">
+        <% } %>
+      </div>
+    </form>
+  </div>
+  <input id="submit" type="submit" form="edit-data"></input>
+</div>
+
+<%- include('../partials/footer') %>

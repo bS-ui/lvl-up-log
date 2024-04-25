@@ -21,9 +21,16 @@ Gaming is a big part of what I do in my free time so I wanted to create somethin
 ### Technologies Used:
 
 * HTML
-* JavaScript
 * CSS
-* Git and GitHub
+* MongoDB
+* JavaScript
+* Whimsical
+* Trello  
+* Fly.io
+* Google OAuth
+* Express
+* Node
+* Passport.js
 
 ### Credits:
 

@@ -38,7 +38,7 @@ function setFav(req, res) {
         fetch(`https://api.rawg.io/api/games?genres=action&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-          res.render('profiles/setfavorite', {
+          res.render('profiles/set-favorite', {
             selectedGenre: req.body.genre,
             games,
             genres,
@@ -54,7 +54,7 @@ function setFav(req, res) {
         fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-          res.render('profiles/setfavorite', {
+          res.render('profiles/set-favorite', {
             selectedGenre: req.body.genre,
             games,
             genres,
@@ -114,7 +114,7 @@ function setRpg(req, res) {
         fetch(`https://api.rawg.io/api/games?genres=action&key=b658202e9c5c4018973e0e3ce9a98977`)
         .then(response => response.json())
         .then(games => {
-          res.render('profiles/setrecentlyplayedgame', {
+          res.render('profiles/set-recently-played-game', {
             selectedGenre: req.body.genre,
             games,
             genres,
@@ -189,10 +189,40 @@ function deleteRpg(req, res) {
     .then
       res.redirect(`/profiles/${profile._id}`)
   })
+  .catch(error => {
+    console.error('Error:', error)
+    res.redirect(`/profiles`)
+  })
 }
 
 function editInfo(req, res) {
-  res.render('profiles/editInfo')
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    res.render('profiles/edit-info', {
+      profile,
+      title: `lvlUpLog: ${profile.name}`
+    })
+  })
+  .catch(error => {
+    console.error('Error:', error)
+    res.redirect(`/profiles`)
+  })
+}
+
+function setInfo(req, res) {
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    profile.steam = req.body
+    profile.location = req.body
+    profile.discord = req.body
+    profile.save()
+    .then
+      res.redirect(`/profiles/${profile._id}`)
+  })
+  .catch(error => {
+    console.error('Error:', error)
+    res.redirect(`/profiles`)
+  })
 }
 export {
   index,
@@ -203,4 +233,5 @@ export {
   newRpg,
   deleteRpg,
   editInfo,
+  setInfo,
 }
