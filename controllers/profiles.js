@@ -212,9 +212,9 @@ function editInfo(req, res) {
 function setInfo(req, res) {
   Profile.findById(req.params.profileId)
   .then(profile => {
-    profile.steam = req.body
-    profile.location = req.body
-    profile.discord = req.body
+    profile.steam = req.body.steam
+    profile.location = req.body.location
+    profile.discord = req.body.discord
     profile.save()
     .then
       res.redirect(`/profiles/${profile._id}`)
