@@ -69,3 +69,9 @@ i {
   border: none;
   margin: 20px 0px 20px;
 }
+button {
+  padding: 0px;
+  margin: 0px;
+  background-color: #333341;
+  border: none;
+}

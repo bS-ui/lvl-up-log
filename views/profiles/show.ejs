@@ -77,7 +77,7 @@
         <%= game.review.text %>
         <% if (profile._id.equals(user?.profile._id)) { %>
           <form action="/profiles/<%= profile._id %>/<%= game._id %>?_method=DELETE"method="POST">
-            <button id="delete" type="submit">X</button>
+            <button id="delete" type="submit"><i class="fa-solid fa-trash"></i></button>
           </form>
         <% } %>
       </div>
