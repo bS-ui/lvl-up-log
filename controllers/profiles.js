@@ -28,7 +28,7 @@ function show(req, res) {
   })
 }
 
-function setFav(req, res) {
+function createFav(req, res) {
   fetch('https://api.rawg.io/api/genres?page_size=40&key=b658202e9c5c4018973e0e3ce9a98977')
   .then(response => response.json())
   .then(genres => {
@@ -104,7 +104,7 @@ function newFav(req, res) {
   })
 }
 
-function setRpg(req, res) {
+function createRpg(req, res) {
   fetch('https://api.rawg.io/api/genres?page_size=40&key=b658202e9c5c4018973e0e3ce9a98977')
   .then(response => response.json())
   .then(genres => {
@@ -209,7 +209,7 @@ function editInfo(req, res) {
   })
 }
 
-function setInfo(req, res) {
+function updateInfo(req, res) {
   Profile.findById(req.params.profileId)
   .then(profile => {
     profile.steam = req.body.steam
@@ -227,11 +227,11 @@ function setInfo(req, res) {
 export {
   index,
   show,
-  setFav,
+  createFav,
   newFav,
-  setRpg,
+  createRpg,
   newRpg,
   deleteRpg,
   editInfo,
-  setInfo,
+  updateInfo,
 }

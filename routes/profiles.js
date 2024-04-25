@@ -11,20 +11,20 @@ router.get('/', profilesCtrl.index)
 // GET /profiles/:profileId
 router.get('/:profileId', profilesCtrl.show)
 
-// GET /profiles/:profileId/set-fav
-router.get('/:profileId/set-fav', isLoggedIn, profilesCtrl.setFav)
+// GET /profiles/:profileId/new-fav
+router.get('/:profileId/new-fav', isLoggedIn, profilesCtrl.newFav)
 
-// GET /profiles/:profileId/set-rpg
-router.get('/:profileId/set-rpg', isLoggedIn, profilesCtrl.setRpg)
+// GET /profiles/:profileId/new-rpg
+router.get('/:profileId/new-rpg', isLoggedIn, profilesCtrl.newRpg)
 
-// GET /profiles/:profileId/editInfo
+// GET /profiles/:profileId/edit-info
 router.get('/:profileId/edit-info', isLoggedIn, profilesCtrl.editInfo)
 
-// POST /profiles/:profileId/set-fav
-router.post('/:profileId/set-fav', isLoggedIn, profilesCtrl.setFav)
+// POST /profiles/:profileId/create-fav
+router.post('/:profileId/create-fav', isLoggedIn, profilesCtrl.createFav)
 
-// POST /profiles/:profileId/set-rpg
-router.post('/:profileId/set-rpg', isLoggedIn,profilesCtrl.setRpg)
+// POST /profiles/:profileId/create-rpg
+router.post('/:profileId/create-rpg', isLoggedIn,profilesCtrl.createRpg)
 
 // POST /profiles/:profileId/new-fav
 router.post('/:profileId/new-fav', isLoggedIn, profilesCtrl.newFav)
@@ -32,8 +32,8 @@ router.post('/:profileId/new-fav', isLoggedIn, profilesCtrl.newFav)
 // POST /profiles/:profileId/new-rpg
 router.post('/:profileId/new-rpg', isLoggedIn, profilesCtrl.newRpg)
 
-// POST /profiles/:profileId/edit-info
-router.post('/:profileId/edit-info', isLoggedIn, profilesCtrl.setInfo)
+// POST /profiles/:profileId/update-info
+router.post('/:profileId/update-info', isLoggedIn, profilesCtrl.updateInfo)
 
 // DELETE /profiles/:/profileId/:gameId
 router.delete('/:profileId/:gameId', isLoggedIn, profilesCtrl.deleteRpg)
