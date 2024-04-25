@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   margin: 30px 0px 0px 0px;
-  color: #37ebea;
+  color: white;
   font-size: 35px;
 }
 #profile-content {
@@ -32,7 +32,7 @@
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 15px;
-  color: #37ebea;
+  color: white;
 }
 #favorite-game, #recent-game {
   display: flex;
