@@ -2,7 +2,7 @@
 
 # **lvlUpLog!**
 
-A platform for gamers to display things like their Discord, Steam, Favorite Game, Recently Played Games and a way for people to find others that share their interests!
+A platform for users to display things like their Discord, Steam, Favorite Game, Recently Played Games and a way for people to find others that share their interests!
 
 ### How the app works:
 
