@@ -36,6 +36,7 @@ Gaming is a big part of what I do in my free time so I wanted to create somethin
 
 * [Coolors](https://coolors.co/) For really nifty Color Palettes! (Affiliate Link: *wink wink* [Coolors](https://coolors.co/?ref=660a03d754a759000bebf5e6))
 * [FontAwesome (Icons)](https://fontawesome.com/icons) For a HUGE selection of high quality icons and most are free to use!
+* [Rawg](https://rawg.io/apidocs) For the API used to find the game genres, games, and images.
 
 ### To-Dos and Goals:
 

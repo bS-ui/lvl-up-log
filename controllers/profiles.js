@@ -29,13 +29,13 @@ function show(req, res) {
 }
 
 function createFav(req, res) {
-  fetch('https://api.rawg.io/api/genres?page_size=40&key=b658202e9c5c4018973e0e3ce9a98977')
+  fetch('https://api.rawg.io/api/genres?page_size=40&key=')
   .then(response => response.json())
   .then(genres => {
     Profile.findById(req.params.profileId)
     .then(profile => {
       if (req.body.genre == undefined) {
-        fetch(`https://api.rawg.io/api/games?genres=action&key=b658202e9c5c4018973e0e3ce9a98977`)
+        fetch(`https://api.rawg.io/api/games?genres=action&key=`)
         .then(response => response.json())
         .then(games => {
           res.render('profiles/set-favorite', {
@@ -51,7 +51,7 @@ function createFav(req, res) {
           res.redirect(`/profiles`)
         })
       } else {
-        fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=b658202e9c5c4018973e0e3ce9a98977`)
+        fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=`)
         .then(response => response.json())
         .then(games => {
           res.render('profiles/set-favorite', {
@@ -85,7 +85,7 @@ function newFav(req, res) {
     profile.favoriteGame.review = req.body
     profile.save()
     .then
-      fetch(`https://api.rawg.io/api/games/${(profile.favoriteGame.name).replace(/\s+/g, '-').toLowerCase()}?key=b658202e9c5c4018973e0e3ce9a98977`)
+      fetch(`https://api.rawg.io/api/games/${(profile.favoriteGame.name).replace(/\s+/g, '-').toLowerCase()}?key=`)
       .then(response => response.json())
       .then(game => {
         profile.favoriteGame.imageUrl = game.background_image
@@ -105,13 +105,13 @@ function newFav(req, res) {
 }
 
 function createRpg(req, res) {
-  fetch('https://api.rawg.io/api/genres?page_size=40&key=b658202e9c5c4018973e0e3ce9a98977')
+  fetch('https://api.rawg.io/api/genres?page_size=40&key=')
   .then(response => response.json())
   .then(genres => {
     Profile.findById(req.params.profileId)
     .then(profile => {
       if (req.body.genre == undefined) {
-        fetch(`https://api.rawg.io/api/games?genres=action&key=b658202e9c5c4018973e0e3ce9a98977`)
+        fetch(`https://api.rawg.io/api/games?genres=action&key=`)
         .then(response => response.json())
         .then(games => {
           res.render('profiles/set-recently-played-game', {
@@ -127,7 +127,7 @@ function createRpg(req, res) {
           res.redirect(`/profiles`)
         })
       } else {
-        fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=b658202e9c5c4018973e0e3ce9a98977`)
+        fetch(`https://api.rawg.io/api/games?genres=${req.body.genre == 'RPG' ? 'role-playing-games-rpg' : req.body.genre == 'Board Games' ? 'board-games' : req.body.genre == 'Massively Multiplayer' ? 'massively-multiplayer' : (req.body.genre).split(" ").join("").toLowerCase()}&key=`)
         .then(response => response.json())
         .then(games => {
           res.render('profiles/set-recently-played-game', {
@@ -162,7 +162,7 @@ function newRpg(req, res) {
     profile.recentlyPlayedGames[profile.recentlyPlayedGames.length-1].review = req.body
     profile.save()
     .then
-      fetch(`https://api.rawg.io/api/games/${(profile.recentlyPlayedGames[profile.recentlyPlayedGames.length-1].name).replace(/\s+/g, '-').toLowerCase()}?key=b658202e9c5c4018973e0e3ce9a98977`)
+      fetch(`https://api.rawg.io/api/games/${(profile.recentlyPlayedGames[profile.recentlyPlayedGames.length-1].name).replace(/\s+/g, '-').toLowerCase()}?key=`)
       .then(response => response.json())
       .then(game => {
         profile.recentlyPlayedGames[profile.recentlyPlayedGames.length-1].imageUrl = game.background_image
