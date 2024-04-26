@@ -12,10 +12,10 @@ router.get('/', profilesCtrl.index)
 router.get('/:profileId', profilesCtrl.show)
 
 // GET /profiles/:profileId/new-fav
-router.get('/:profileId/new-fav', isLoggedIn, profilesCtrl.newFav)
+router.get('/:profileId/create-fav', isLoggedIn, profilesCtrl.createFav)
 
 // GET /profiles/:profileId/new-rpg
-router.get('/:profileId/new-rpg', isLoggedIn, profilesCtrl.newRpg)
+router.get('/:profileId/create-rpg', isLoggedIn, profilesCtrl.createRpg)
 
 // GET /profiles/:profileId/edit-info
 router.get('/:profileId/edit-info', isLoggedIn, profilesCtrl.editInfo)

@@ -7,7 +7,7 @@
     <div id="add-game-header">
       Add your recently played game!
     </div>
-    <form action="/profiles/<%= profile._id %>/set-rpg" method="POST">
+    <form action="/profiles/<%= profile._id %>/create-rpg" method="POST">
       <select name="genre" class="form-control" id="genre">  
         <% genres.results.forEach(genre => { %>
           <option <%= genre.name == selectedGenre ? selected="selected" : ""%> value="<%= genre.name %>"><%= genre.name %></option>

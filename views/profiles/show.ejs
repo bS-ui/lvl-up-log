@@ -48,11 +48,11 @@
       </div>
       <% if (profile._id.equals(user?.profile._id)) { %>
         <% if (profile.favoriteGame == undefined) { %>
-          <a href="/profiles/<%= profile._id %>/set-fav">
+          <a href="/profiles/<%= profile._id %>/create-fav">
             <i class="fa-solid fa-circle-plus"></i>
           </a> 
         <% } else { %>
-          <a href="/profiles/<%= profile._id %>/set-fav">
+          <a href="/profiles/<%= profile._id %>/create-fav">
             <i class="fa-solid fa-pen"></i>
           </a>
         <% } %>
@@ -79,7 +79,7 @@
         Recently Played Games:
       </div>
       <% if (profile._id.equals(user?.profile._id)) { %>
-        <a href="/profiles/<%= profile._id %>/set-rpg">
+        <a href="/profiles/<%= profile._id %>/create-rpg">
           <i class="fa-solid fa-circle-plus"></i>
         </a> 
       <% } %>

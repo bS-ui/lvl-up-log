@@ -18,7 +18,7 @@
         Discord:
       </div>
     </div>
-    <form id="edit-data" action="/profiles/<%= profile._id %>/edit-info" method="POST">
+    <form id="edit-data" action="/profiles/<%= profile._id %>/update-info" method="POST">
       <div id="location">
         <% if (profile.location == undefined) { %>
           <input type="text" name="location" value="Add your location here!">
