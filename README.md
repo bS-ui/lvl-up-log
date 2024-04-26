@@ -31,6 +31,7 @@ Gaming is a big part of what I do in my free time so I wanted to create somethin
 * Express
 * Node
 * Passport.js
+* Copilot (For Logo)
 
 ### Credits:
 
